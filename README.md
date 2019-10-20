@@ -6,7 +6,7 @@ Because of the time's inevitable effect on things, this tool got old too. I will
 
 # **Some of my plans are:**
 
-- Rewrite, UO Installation Path detection mechanism, and custom path specifying feature, for once and for all the components in the solution, not just for Pandora itself
+- Rewrite UO Installation Path detection mechanism, and custom path specifying feature, for once and for all the components in the solution, not just for Pandora itself
 
 - Map -> Follow feature doesn't work and hangs the tool, fix it
 - Add SE/ML/HS/SA mobiles/items/gumps respectively (This will take a while)
