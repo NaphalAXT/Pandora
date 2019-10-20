@@ -203,15 +203,22 @@ namespace Ultima
 
 		private static readonly string[] knownRegkeys =
 		{
-			@"Electronic Arts\EA Games\Ultima Online Classic", @"Electronic Arts\EA Games\Ultima Online Stygian Abyss Classic",
-			@"Origin Worlds Online\Ultima Online\KR Legacy Beta", @"Origin Worlds Online\Ultima Online Samurai Empire\3d\1.0",
+			@"Electronic Arts\EA Games\Ultima Online Classic", 
+            @"Electronic Arts\EA Games\Ultima Online Stygian Abyss Classic",
+			@"Origin Worlds Online\Ultima Online\KR Legacy Beta",
+            @"Origin Worlds Online\Ultima Online Samurai Empire\3d\1.0",
 			@"Origin Worlds Online\Ultima Online Samurai Empire\2d\1.0",
 			@"Origin Worlds Online\Ultima Online Samurai Empire BETA\3d\1.0",
-			@"Origin Worlds Online\Ultima Online Samurai Empire BETA\2d\1.0", @"EA Games\Ultima Online: Mondain's Legacy\1.0",
-			@"EA Games\Ultima Online: Mondain's Legacy\1.00.0000", @"EA GAMES\Ultima Online: Samurai Empire\1.00.0000",
-			@"EA Games\Ultima Online: Mondain's Legacy", @"EA GAMES\Ultima Online Samurai Empire\1.00.0000",
-			@"EA GAMES\Ultima Online: Samurai Empire\1.0", @"EA GAMES\Ultima Online Samurai Empire",
-			@"EA GAMES\Ultima Online Samurai Empire\1.0", @"Origin Worlds Online\Ultima Online\1.0",
+			@"Origin Worlds Online\Ultima Online Samurai Empire BETA\2d\1.0", 
+            @"EA Games\Ultima Online: Mondain's Legacy\1.0",
+			@"EA Games\Ultima Online: Mondain's Legacy\1.00.0000", 
+            @"EA GAMES\Ultima Online: Samurai Empire\1.00.0000",
+			@"EA Games\Ultima Online: Mondain's Legacy", 
+            @"EA GAMES\Ultima Online Samurai Empire\1.00.0000",
+			@"EA GAMES\Ultima Online: Samurai Empire\1.0", 
+            @"EA GAMES\Ultima Online Samurai Empire",
+			@"EA GAMES\Ultima Online Samurai Empire\1.0", 
+            @"Origin Worlds Online\Ultima Online\1.0",
 			@"Origin Worlds Online\Ultima Online Third Dawn\1.0"
 		};
 
@@ -222,16 +229,14 @@ namespace Ultima
 			string dir = null;
 			for (var i = knownRegkeys.Length - 1; i >= 0; i--)
 			{
-				string exePath;
+				string exePath = GetPath(knownRegkeys[i]); ;
 
-				if (Environment.Is64BitOperatingSystem)
-				{
+
+                // On 64 bit win10 not always Wow6432Node\ contains UO registry key (tested with UO: TOL)
+                if (Environment.Is64BitOperatingSystem && string.IsNullOrEmpty(exePath))
 					exePath = GetPath(string.Format(@"Wow6432Node\{0}", knownRegkeys[i]));
-				}
-				else
-				{
-					exePath = GetPath(knownRegkeys[i]);
-				}
+
+
 
 				if (exePath != null)
 				{
@@ -239,6 +244,7 @@ namespace Ultima
 					break;
 				}
 			}
+
 			return dir;
 		}
 
