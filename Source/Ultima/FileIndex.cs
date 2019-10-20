@@ -209,8 +209,8 @@ namespace Ultima
 
 					if (!File.Exists(MulPath))
 					{
-						MulPath = null;
-					}
+                        MulPath = null;
+                    }
 				}
 
 				if (String.IsNullOrEmpty(uopPath))
@@ -227,7 +227,7 @@ namespace Ultima
 					if (!File.Exists(uopPath))
 					{
 						uopPath = null;
-					}
+                    }
 					else
 					{
 						MulPath = uopPath;

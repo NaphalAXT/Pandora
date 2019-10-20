@@ -113,12 +113,19 @@ namespace TheBox.Common
 
 		private static void WriteRegistryKey(string path)
 		{
-			var key = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\Origin Worlds Online\Ultima Online\1.0");
+            try
+            {
+                var key = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\Origin Worlds Online\Ultima Online\1.0");
 
-			key.SetValue("ExePath", path + @"\client.exe");
-			key.SetValue("InstCDPath", path);
-			key.SetValue("PatchExePath", path + @"\uopatch.exe");
-			key.SetValue("StartExeParg", path + @"\uo.exe");
+                key.SetValue("ExePath", path + @"\client.exe");
+                key.SetValue("InstCDPath", path);
+                key.SetValue("PatchExePath", path + @"\uopatch.exe");
+                key.SetValue("StartExeParg", path + @"\uo.exe");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Couldn't write reg key for uo installation path.", "Error");
+            }
 		}
 		// Issues 43 - End
 

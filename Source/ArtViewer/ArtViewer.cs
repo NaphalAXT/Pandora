@@ -631,7 +631,7 @@ namespace TheBox.ArtViewer
 					{
 						m_Image = new Bitmap(Ultima.Art.GetStatic(m_ArtIndex));
 					}
-					catch
+					catch(Exception ex)
 					{
 						m_Image = null;
 					}

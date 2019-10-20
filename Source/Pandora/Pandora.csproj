@@ -89,6 +89,9 @@
     <Prefer32Bit>false</Prefer32Bit>
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ultima\Ultima.csproj">
       <Project>{e08cfbe4-e013-44ee-8829-426d05bc083f}</Project>
@@ -1021,6 +1024,7 @@
     <Content Include="Roofing\Roofing.cs">
       <SubType>Code</SubType>
     </Content>
+    <None Include="app.manifest" />
     <None Include="Resources\box_down.gif" />
     <None Include="Resources\box_normal.gif" />
   </ItemGroup>
