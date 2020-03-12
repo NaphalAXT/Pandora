@@ -134,7 +134,7 @@ namespace TheBox.Common
 			m_Stream.WriteLine(DateTime.Now.ToString());
 			m_Stream.WriteLine("Windows version: " + Environment.OSVersion.Version);
 
-			m_Stream.WriteLine("Processor family: " + CPUType);
+			//m_Stream.WriteLine("Processor family: " + CPUType);
 
 			m_Stream.WriteLine("Physical memory: " + (memSt.dwTotalPhys / 1024));
 			m_Stream.WriteLine();
