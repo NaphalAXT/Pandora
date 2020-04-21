@@ -205,7 +205,7 @@ namespace TheBox.Data
 			get
 			{
 				return string.Format(
-					Pandora.Localization.TextProvider["Notes.Created"],
+					Pandora.Localization.GetTextProvider()["Notes.Created"],
 					m_Date.ToShortDateString(),
 					m_Date.ToShortTimeString());
 			}
@@ -254,12 +254,12 @@ namespace TheBox.Data
 			m_LocationsMenu = new ContextMenu();
 
 			// Add new location
-			var miAdd = new MenuItem(Pandora.Localization.TextProvider["Notes.AddLoc"]);
+			var miAdd = new MenuItem(Pandora.Localization.GetTextProvider()["Notes.AddLoc"]);
 			miAdd.Click += miAdd_Click;
 			m_LocationsMenu.MenuItems.Add(miAdd);
 
 			// Delete locations
-			var miDel = new MenuItem(Pandora.Localization.TextProvider["Notes.DelLoc"]);
+			var miDel = new MenuItem(Pandora.Localization.GetTextProvider()["Notes.DelLoc"]);
 			miDel.Enabled = m_Locations.Count > 0;
 			m_LocationsMenu.MenuItems.Add(miDel);
 

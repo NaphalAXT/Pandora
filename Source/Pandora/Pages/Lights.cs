@@ -121,9 +121,9 @@ namespace TheBox.Pages
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
-			// 
+			//
 			// b0
-			// 
+			//
 			this.b0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b0.Location = new System.Drawing.Point(0, 0);
 			this.b0.Name = "b0";
@@ -131,9 +131,9 @@ namespace TheBox.Pages
 			this.b0.TabIndex = 0;
 			this.b0.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b1
-			// 
+			//
 			this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b1.Location = new System.Drawing.Point(72, 0);
 			this.b1.Name = "b1";
@@ -141,9 +141,9 @@ namespace TheBox.Pages
 			this.b1.TabIndex = 1;
 			this.b1.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b2
-			// 
+			//
 			this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b2.Location = new System.Drawing.Point(144, 0);
 			this.b2.Name = "b2";
@@ -151,9 +151,9 @@ namespace TheBox.Pages
 			this.b2.TabIndex = 2;
 			this.b2.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b3
-			// 
+			//
 			this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b3.Location = new System.Drawing.Point(216, 0);
 			this.b3.Name = "b3";
@@ -161,9 +161,9 @@ namespace TheBox.Pages
 			this.b3.TabIndex = 3;
 			this.b3.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b4
-			// 
+			//
 			this.b4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b4.Location = new System.Drawing.Point(288, 0);
 			this.b4.Name = "b4";
@@ -171,9 +171,9 @@ namespace TheBox.Pages
 			this.b4.TabIndex = 4;
 			this.b4.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b5
-			// 
+			//
 			this.b5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b5.Location = new System.Drawing.Point(0, 72);
 			this.b5.Name = "b5";
@@ -181,9 +181,9 @@ namespace TheBox.Pages
 			this.b5.TabIndex = 5;
 			this.b5.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b6
-			// 
+			//
 			this.b6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b6.Location = new System.Drawing.Point(72, 72);
 			this.b6.Name = "b6";
@@ -191,9 +191,9 @@ namespace TheBox.Pages
 			this.b6.TabIndex = 6;
 			this.b6.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b7
-			// 
+			//
 			this.b7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b7.Location = new System.Drawing.Point(144, 72);
 			this.b7.Name = "b7";
@@ -201,9 +201,9 @@ namespace TheBox.Pages
 			this.b7.TabIndex = 7;
 			this.b7.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b8
-			// 
+			//
 			this.b8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b8.Location = new System.Drawing.Point(216, 72);
 			this.b8.Name = "b8";
@@ -211,9 +211,9 @@ namespace TheBox.Pages
 			this.b8.TabIndex = 8;
 			this.b8.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// b9
-			// 
+			//
 			this.b9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.b9.Location = new System.Drawing.Point(288, 72);
 			this.b9.Name = "b9";
@@ -221,9 +221,9 @@ namespace TheBox.Pages
 			this.b9.TabIndex = 9;
 			this.b9.MouseEnter += new System.EventHandler(this.OnButton);
 			this.b9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnButtonDown);
-			// 
+			//
 			// cmbCategories
-			// 
+			//
 			this.cmbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbCategories.DropDownWidth = 132;
 			this.cmbCategories.Location = new System.Drawing.Point(360, 36);
@@ -232,9 +232,9 @@ namespace TheBox.Pages
 			this.cmbCategories.Size = new System.Drawing.Size(132, 21);
 			this.cmbCategories.TabIndex = 10;
 			this.cmbCategories.SelectedIndexChanged += new System.EventHandler(this.cmbCategories_SelectedIndexChanged);
-			// 
+			//
 			// bNoLight
-			// 
+			//
 			this.bNoLight.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.bNoLight.Location = new System.Drawing.Point(360, 64);
 			this.bNoLight.Name = "bNoLight";
@@ -242,9 +242,9 @@ namespace TheBox.Pages
 			this.bNoLight.TabIndex = 11;
 			this.bNoLight.Text = "Lights.NoLight";
 			this.bNoLight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bNoLight_MouseDown);
-			// 
+			//
 			// labLight
-			// 
+			//
 			this.labLight.Font = new System.Drawing.Font(
 				"Microsoft Sans Serif",
 				8.25F,
@@ -257,9 +257,9 @@ namespace TheBox.Pages
 			this.labLight.TabIndex = 12;
 			this.labLight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.labLight.Paint += new System.Windows.Forms.PaintEventHandler(this.labLight_Paint);
-			// 
+			//
 			// lnkDecoLight
-			// 
+			//
 			this.lnkDecoLight.Location = new System.Drawing.Point(12, 16);
 			this.lnkDecoLight.Name = "lnkDecoLight";
 			this.lnkDecoLight.Size = new System.Drawing.Size(108, 28);
@@ -270,9 +270,9 @@ namespace TheBox.Pages
 			this.lnkDecoLight.LinkClicked +=
 				new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkDecoLight_LinkClicked);
 			this.lnkDecoLight.Paint += new System.Windows.Forms.PaintEventHandler(this.linkLabel1_Paint);
-			// 
+			//
 			// groupBox1
-			// 
+			//
 			this.groupBox1.Controls.Add(this.lnkDecoLight);
 			this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.groupBox1.Location = new System.Drawing.Point(360, 92);
@@ -281,9 +281,9 @@ namespace TheBox.Pages
 			this.groupBox1.TabIndex = 15;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Lights.SetDeco";
-			// 
+			//
 			// Lights
-			// 
+			//
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.labLight);
 			this.Controls.Add(this.bNoLight);
@@ -523,7 +523,7 @@ namespace TheBox.Pages
 		/// </summary>
 		private void lnkDecoLight_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			MessageBox.Show(Pandora.Localization.TextProvider["Lights.SetMsg"]);
+			MessageBox.Show(Pandora.Localization.GetTextProvider()["Lights.SetMsg"]);
 			m_SelectingDecoLight = true;
 		}
 	}

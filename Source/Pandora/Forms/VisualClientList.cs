@@ -51,8 +51,8 @@ namespace TheBox.Forms
 			tBar.ImageList = new ImageList();
 			tBar.ImageList.ImageSize = new Size(1, 1);
 
-			bExit.Text = Pandora.Localization.TextProvider["Common.Exit"];
-			bRefresh.Text = Pandora.Localization.TextProvider["Common.Refresh"];
+			bExit.Text = Pandora.Localization.GetTextProvider()["Common.Exit"];
+			bRefresh.Text = Pandora.Localization.GetTextProvider()["Common.Refresh"];
 
 			// Flickering fix
 			SetStyle(ControlStyles.DoubleBuffer, true);

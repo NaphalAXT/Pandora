@@ -47,7 +47,7 @@ namespace TheBox.Forms
 		public MulManagerForm(MulManager manager)
 		{
 			InitializeComponent();
-			m_Text = Pandora.Localization.TextProvider;
+			m_Text = Pandora.Localization.GetTextProvider();
 			Pandora.Localization.LocalizeControl(this);
 			m_Manager = manager;
 		}

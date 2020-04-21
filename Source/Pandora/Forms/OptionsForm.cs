@@ -1534,7 +1534,7 @@ namespace TheBox.Forms
 			// UO Folder
 			if (Pandora.Profile.MulManager.DefaultFolder == null)
 			{
-				labUOFolder.Text = Pandora.Localization.TextProvider["Options.NOUOFolder"];
+				labUOFolder.Text = Pandora.Localization.GetTextProvider()["Options.NOUOFolder"];
 			}
 			else
 			{
@@ -1615,8 +1615,8 @@ namespace TheBox.Forms
 			// Profile
 			txProfName.Text = Pandora.Profile.Name;
 
-			var langs = new string[Pandora.Localization.SupportedLanguages.Count];
-			Pandora.Localization.SupportedLanguages.CopyTo(langs, 0);
+			var langs = new string[Pandora.Localization.GetSupportedLanguages().Count];
+			Pandora.Localization.GetSupportedLanguages().CopyTo(langs, 0);
 			cmbLang.Items.AddRange(langs);
 			cmbLang.SelectedItem = Pandora.Profile.Language;
 
@@ -1677,13 +1677,13 @@ namespace TheBox.Forms
 
 			if (defProf != null && defProf.Length > 0)
 			{
-				labDefaultProfile.Text = string.Format(Pandora.Localization.TextProvider["Options.DefaultProf"], defProf);
+				labDefaultProfile.Text = string.Format(Pandora.Localization.GetTextProvider()["Options.DefaultProf"], defProf);
 			}
 			else
 			{
 				labDefaultProfile.Text = string.Format(
-					Pandora.Localization.TextProvider["Options.DefaultProf"],
-					Pandora.Localization.TextProvider["Common.None"]);
+					Pandora.Localization.GetTextProvider()["Options.DefaultProf"],
+					Pandora.Localization.GetTextProvider()["Common.None"]);
 			}
 		}
 
@@ -1749,7 +1749,7 @@ namespace TheBox.Forms
 			{
 				if (MessageBox.Show(
 						this,
-						Pandora.Localization.TextProvider["Misc.ServerChanged"],
+						Pandora.Localization.GetTextProvider()["Misc.ServerChanged"],
 						null,
 						MessageBoxButtons.YesNo,
 						MessageBoxIcon.Question) == DialogResult.Yes)
@@ -1922,7 +1922,7 @@ namespace TheBox.Forms
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Options.OverwriteBoxData"],
+					Pandora.Localization.GetTextProvider()["Options.OverwriteBoxData"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)
@@ -1941,7 +1941,7 @@ namespace TheBox.Forms
 					}
 					catch
 					{
-						MessageBox.Show(Pandora.Localization.TextProvider["Errors.WrongFile"]);
+						MessageBox.Show(Pandora.Localization.GetTextProvider()["Errors.WrongFile"]);
 						return;
 					}
 
@@ -1961,7 +1961,7 @@ namespace TheBox.Forms
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Options.OverwriteProps"],
+					Pandora.Localization.GetTextProvider()["Options.OverwriteProps"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)
@@ -1980,7 +1980,7 @@ namespace TheBox.Forms
 					}
 					catch
 					{
-						MessageBox.Show(Pandora.Localization.TextProvider["Errors.WrongFile"]);
+						MessageBox.Show(Pandora.Localization.GetTextProvider()["Errors.WrongFile"]);
 						return;
 					}
 
@@ -1996,7 +1996,7 @@ namespace TheBox.Forms
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Options.OverwriteSpawns"],
+					Pandora.Localization.GetTextProvider()["Options.OverwriteSpawns"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)
@@ -2015,7 +2015,7 @@ namespace TheBox.Forms
 					}
 					catch
 					{
-						MessageBox.Show(Pandora.Localization.TextProvider["Errors.WrongFile"]);
+						MessageBox.Show(Pandora.Localization.GetTextProvider()["Errors.WrongFile"]);
 						return;
 					}
 
@@ -2037,7 +2037,7 @@ namespace TheBox.Forms
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Options.OverwriteGroups"],
+					Pandora.Localization.GetTextProvider()["Options.OverwriteGroups"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)
@@ -2056,7 +2056,7 @@ namespace TheBox.Forms
 					}
 					catch
 					{
-						MessageBox.Show(Pandora.Localization.TextProvider["Errors.WrongFile"]);
+						MessageBox.Show(Pandora.Localization.GetTextProvider()["Errors.WrongFile"]);
 						return;
 					}
 
@@ -2362,7 +2362,7 @@ namespace TheBox.Forms
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Options.OverwriteMap"],
+					Pandora.Localization.GetTextProvider()["Options.OverwriteMap"],
 					null,
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)
@@ -2381,7 +2381,7 @@ namespace TheBox.Forms
 					}
 					catch
 					{
-						MessageBox.Show(Pandora.Localization.TextProvider["Errors.WrongFile"]);
+						MessageBox.Show(Pandora.Localization.GetTextProvider()["Errors.WrongFile"]);
 						return;
 					}
 
@@ -2436,7 +2436,7 @@ namespace TheBox.Forms
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Options.DefLocWarn"],
+					Pandora.Localization.GetTextProvider()["Options.DefLocWarn"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)
@@ -2525,7 +2525,7 @@ namespace TheBox.Forms
 		{
 			Pandora.Profile.Server.SetPassword(txPass.Text);
 			txPass.Text = "";
-			MessageBox.Show(Pandora.Localization.TextProvider["Options.PassUpdated"]);
+			MessageBox.Show(Pandora.Localization.GetTextProvider()["Options.PassUpdated"]);
 		}
 
 		/// <summary>
@@ -2545,7 +2545,7 @@ namespace TheBox.Forms
 			{
 				Pandora.Profile.Server.UseSHA1Crypt = chkSHA1.Checked;
 
-				MessageBox.Show(Pandora.Localization.TextProvider["Options.SHA1CheckWarn"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Options.SHA1CheckWarn"]);
 			}
 		}
 		#endregion
@@ -2573,7 +2573,7 @@ namespace TheBox.Forms
 
 					if (Directory.Exists(newFolder))
 					{
-						MessageBox.Show(Pandora.Localization.TextProvider["Errors.ProfExists"]);
+						MessageBox.Show(Pandora.Localization.GetTextProvider()["Errors.ProfExists"]);
 						return;
 					}
 
@@ -2652,7 +2652,7 @@ namespace TheBox.Forms
 				{
 					if (MessageBox.Show(
 							this,
-							Pandora.Localization.TextProvider["Messages.DelCurrentProfile"],
+							Pandora.Localization.GetTextProvider()["Messages.DelCurrentProfile"],
 							"",
 							MessageBoxButtons.YesNo,
 							MessageBoxIcon.Question) == DialogResult.Yes)
@@ -2665,7 +2665,7 @@ namespace TheBox.Forms
 				{
 					if (MessageBox.Show(
 							this,
-							Pandora.Localization.TextProvider["Messages.DelProfile"],
+							Pandora.Localization.GetTextProvider()["Messages.DelProfile"],
 							"",
 							MessageBoxButtons.YesNo,
 							MessageBoxIcon.Question) == DialogResult.Yes)
@@ -2696,7 +2696,7 @@ namespace TheBox.Forms
 			{
 				if (MessageBox.Show(
 						this,
-						Pandora.Localization.TextProvider["Misc.ProfileImport"],
+						Pandora.Localization.GetTextProvider()["Misc.ProfileImport"],
 						"",
 						MessageBoxButtons.YesNo,
 						MessageBoxIcon.Question) == DialogResult.Yes)

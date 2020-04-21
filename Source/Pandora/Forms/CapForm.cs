@@ -638,7 +638,7 @@ namespace TheBox.Forms
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Cap.DelFolder"],
+					Pandora.Localization.GetTextProvider()["Cap.DelFolder"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Warning) == DialogResult.Yes)

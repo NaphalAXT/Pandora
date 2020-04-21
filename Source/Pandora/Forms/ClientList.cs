@@ -148,12 +148,12 @@ namespace TheBox.Forms
 
 			lst.ListViewItemSorter = new InternalComparer();
 
-			col0.Text = Pandora.Localization.TextProvider["Common.Name"];
-			col1.Text = Pandora.Localization.TextProvider["Common.Account"];
-			col2.Text = Pandora.Localization.TextProvider["Common.Map"];
-			col3.Text = Pandora.Localization.TextProvider["Common.Location"];
-			col4.Text = Pandora.Localization.TextProvider["ClientList.Login"];
-			col5.Text = Pandora.Localization.TextProvider["ClientList.Serial"];
+			col0.Text = Pandora.Localization.GetTextProvider()["Common.Name"];
+			col1.Text = Pandora.Localization.GetTextProvider()["Common.Account"];
+			col2.Text = Pandora.Localization.GetTextProvider()["Common.Map"];
+			col3.Text = Pandora.Localization.GetTextProvider()["Common.Location"];
+			col4.Text = Pandora.Localization.GetTextProvider()["ClientList.Login"];
+			col5.Text = Pandora.Localization.GetTextProvider()["ClientList.Serial"];
 		}
 
 		static ClientListForm()

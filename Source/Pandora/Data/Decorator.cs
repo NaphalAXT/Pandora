@@ -48,7 +48,7 @@ namespace TheBox.Data
 					}
 					else
 					{
-						nodes[0] = new TreeNode(Pandora.Localization.TextProvider["Deco.CustomNode"]);
+						nodes[0] = new TreeNode(Pandora.Localization.GetTextProvider()["Deco.CustomNode"]);
 					}
 
 					Array.Copy(m_DefaultNodes, 0, nodes, 1, m_DefaultNodes.Length);
@@ -71,7 +71,7 @@ namespace TheBox.Data
 			{
 				m_Custom.Structure.Clear();
 
-				var n = new GenericNode(Pandora.Localization.TextProvider["Deco.CustomNode"]);
+				var n = new GenericNode(Pandora.Localization.GetTextProvider()["Deco.CustomNode"]);
 
 				foreach (TreeNode sub in value.Nodes)
 				{

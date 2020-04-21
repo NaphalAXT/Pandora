@@ -847,7 +847,7 @@ namespace TheBox.Pages
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Items.DelCat"],
+					Pandora.Localization.GetTextProvider()["Items.DelCat"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -971,7 +971,7 @@ namespace TheBox.Pages
 		/// </summary>
 		private void cmDeleteItem_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show(this, Pandora.Localization.TextProvider["Items.DelItem"], "", MessageBoxButtons.YesNo) ==
+			if (MessageBox.Show(this, Pandora.Localization.GetTextProvider()["Items.DelItem"], "", MessageBoxButtons.YesNo) ==
 				DialogResult.Yes)
 			{
 				// Issue 10 - Update the code to Net Framework 3.5 - http://code.google.com/p/pandorasbox3/issues/detail?id=10 - Smjert
@@ -1029,7 +1029,7 @@ namespace TheBox.Pages
 
 				if (m_Results.Count == 0)
 				{
-					MessageBox.Show(Pandora.Localization.TextProvider["Misc.NoResults"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Misc.NoResults"]);
 					m_Results = null;
 				}
 				else
@@ -1094,7 +1094,7 @@ namespace TheBox.Pages
 			}
 			catch
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Misc.SearchError"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Misc.SearchError"]);
 				m_Results = null;
 			}
 		}

@@ -187,7 +187,7 @@ namespace TheBox.Forms.Editors
 			}
 			else
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Items.NoName"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Items.NoName"]);
 			}
 		}
 

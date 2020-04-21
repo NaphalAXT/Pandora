@@ -793,7 +793,7 @@ namespace TheBox
 					{
 						if (MessageBox.Show(
 								BoxForm as Form,
-								string.Format(Localization.TextProvider["Errors.ModifierWarn"], mi.Text),
+								string.Format(Localization.GetTextProvider()["Errors.ModifierWarn"], mi.Text),
 								"",
 								MessageBoxButtons.YesNo) == DialogResult.No)
 						{

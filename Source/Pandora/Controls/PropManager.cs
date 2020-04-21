@@ -445,11 +445,11 @@ namespace TheBox.Controls
 
 			cmFilters = new ContextMenu();
 
-			var add = new MenuItem(Pandora.Localization.TextProvider["Props.AddPreset"]);
+			var add = new MenuItem(Pandora.Localization.GetTextProvider()["Props.AddPreset"]);
 			add.Click += add_Click;
 			cmFilters.MenuItems.Add(add);
 
-			var del = new MenuItem(Pandora.Localization.TextProvider["Props.DelPreset"]);
+			var del = new MenuItem(Pandora.Localization.GetTextProvider()["Props.DelPreset"]);
 
 			foreach (var s in Pandora.Profile.Props.Filters)
 			{

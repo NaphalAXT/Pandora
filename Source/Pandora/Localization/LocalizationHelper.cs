@@ -19,7 +19,7 @@ using TheBox.Common.Localization;
 namespace TheBox.Localization
 {
 	// Issue 28:  	 Refactoring Pandora.cs - Tarion
-	public class LocalizationHelper
+	public class LocalizationHelper : ILocalizationHelper
 	{
 		private const string DEFAULT_LANGUAGE = "English";
 		private TextProvider m_TextProvider;
@@ -27,44 +27,43 @@ namespace TheBox.Localization
 		/// <summary>
 		///     Gets the TextProvider object used to retrieve localized text
 		/// </summary>
-		public TextProvider TextProvider
+		public TextProvider GetTextProvider()
 		{
-			get
+			if (m_TextProvider == null)
 			{
-				if (m_TextProvider == null)
+				// Issue 6:  	 Improve error management - Tarion
+				try
 				{
-					// Issue 6:  	 Improve error management - Tarion
-					try
-					{
-						m_TextProvider = Pandora.Localization.GetLanguage();
-					}
-					catch
-					{
-						return null;
-					}
-					// End Issue 6
+					m_TextProvider = Pandora.Localization.GetLanguage();
 				}
-
-				return m_TextProvider;
+				catch
+				{
+					return null;
+				}
+				// End Issue 6
 			}
-			set { m_TextProvider = value; }
+
+			return m_TextProvider;
 		}
+
+		/// <summary>
+		///     Gets the TextProvider object used to retrieve localized text
+		/// </summary>
+		public void SetTextProvider(TextProvider value)
+		{ m_TextProvider = value; }
 
 		/// <summary>
 		///     Gets a StringCollection representing the languages available
 		/// </summary>
-		public StringCollection SupportedLanguages
+		public StringCollection GetSupportedLanguages()
 		{
-			get
-			{
-				var languages = new StringCollection();
+			var languages = new StringCollection();
 
-				languages.Add(DEFAULT_LANGUAGE);
+			languages.Add(DEFAULT_LANGUAGE);
 
-				// TODO : Add code to correctly detect supported languages
+			// TODO : Add code to correctly detect supported languages
 
-				return languages;
-			}
+			return languages;
 		}
 
 		/// <summary>
@@ -102,7 +101,7 @@ namespace TheBox.Localization
 				var path = text.Split('.');
 
 				if (path.Length == 2)
-					control.Text = Pandora.Localization.TextProvider[text];
+					control.Text = Pandora.Localization.GetTextProvider()[text];
 
 				if (control is LinkLabel)
 				{
@@ -129,7 +128,7 @@ namespace TheBox.Localization
 			{
 				var text = mi.Text;
 
-				var localizedText = Pandora.Localization.TextProvider[text];
+				var localizedText = Pandora.Localization.GetTextProvider()[text];
 
 				if (localizedText != null)
 					mi.Text = localizedText;
@@ -149,7 +148,7 @@ namespace TheBox.Localization
 			{
 				var text = tsi.Text;
 
-				var localizedText = Pandora.Localization.TextProvider[text];
+				var localizedText = Pandora.Localization.GetTextProvider()[text];
 
 				if (localizedText != null)
 					tsi.Text = localizedText;
@@ -174,7 +173,7 @@ namespace TheBox.Localization
 			{
 				var text = tsi.Text;
 
-				var localizedText = Pandora.Localization.TextProvider[text];
+				var localizedText = Pandora.Localization.GetTextProvider()[text];
 
 				if (localizedText != null)
 					tsi.Text = localizedText;

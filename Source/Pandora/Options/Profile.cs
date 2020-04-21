@@ -482,7 +482,7 @@ namespace TheBox.Options
 				catch (Exception err)
 				{
 					Pandora.Log.WriteError(err, "Couldn't delete profile {0}.", profile);
-					MessageBox.Show(Pandora.Localization.TextProvider["Errors.DelProfileErr"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Errors.DelProfileErr"]);
 				}
 			}
 		}

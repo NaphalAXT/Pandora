@@ -197,7 +197,7 @@ namespace TheBox.Forms
 
 		private void EnableButton()
 		{
-			bOk.Enabled = txName.Text.Length > 0 && labFile.Text != Pandora.Localization.TextProvider["Tools.Browse"] &&
+			bOk.Enabled = txName.Text.Length > 0 && labFile.Text != Pandora.Localization.GetTextProvider()["Tools.Browse"] &&
 						  labFile.Text.Length > 0;
 		}
 

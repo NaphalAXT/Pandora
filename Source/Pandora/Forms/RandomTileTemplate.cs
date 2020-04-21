@@ -419,7 +419,7 @@ namespace TheBox.Forms
 
 			if (tile.Items.Count == 0)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Random.InvalidIDs"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Random.InvalidIDs"]);
 				return;
 			}
 
@@ -515,7 +515,7 @@ namespace TheBox.Forms
 			}
 
 			if (purge.Count > 0)
-				MessageBox.Show(string.Format(Pandora.Localization.TextProvider["Random.Purge"], purge.Count));
+				MessageBox.Show(string.Format(Pandora.Localization.GetTextProvider()["Random.Purge"], purge.Count));
 
 			m_List.Save();
 		}

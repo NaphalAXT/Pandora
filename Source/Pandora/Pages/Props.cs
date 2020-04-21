@@ -125,19 +125,19 @@ namespace TheBox.Pages
 						case BoxPropType.Numeric:
 
 							VisibleControl = labMsg;
-							labMsg.Text = Pandora.Localization.TextProvider["Props.Numeric"];
+							labMsg.Text = Pandora.Localization.GetTextProvider()["Props.Numeric"];
 							break;
 
 						case BoxPropType.Other:
 
 							VisibleControl = labMsg;
-							labMsg.Text = Pandora.Localization.TextProvider["Props.Other"];
+							labMsg.Text = Pandora.Localization.GetTextProvider()["Props.Other"];
 							break;
 
 						case BoxPropType.Text:
 
 							VisibleControl = labMsg;
-							labMsg.Text = Pandora.Localization.TextProvider["Props.Text"];
+							labMsg.Text = Pandora.Localization.GetTextProvider()["Props.Text"];
 							break;
 
 						case BoxPropType.Boolean:
@@ -691,7 +691,7 @@ namespace TheBox.Pages
 
 				if (results.Count == 0)
 				{
-					MessageBox.Show(Pandora.Localization.TextProvider["Props.NoClassMatch"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Props.NoClassMatch"]);
 				}
 				else if (results.Count == 1)
 				{

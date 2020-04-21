@@ -910,6 +910,7 @@
     </Compile>
     <Compile Include="IBoxForm.cs" />
     <Compile Include="LightCoreBuilder.cs" />
+    <Compile Include="Localization\ILocalizationHelper.cs" />
     <Compile Include="Localization\LocalizationHelper.cs" />
     <Compile Include="Options\AdminOptions.cs">
       <SubType>Code</SubType>
@@ -1025,6 +1026,7 @@
       <SubType>Code</SubType>
     </Content>
     <None Include="app.manifest" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\box_down.gif" />
     <None Include="Resources\box_normal.gif" />
   </ItemGroup>

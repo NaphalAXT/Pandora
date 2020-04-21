@@ -376,7 +376,7 @@ namespace TheBox.Forms.Editors
 
 			if (facet != (int)Map.Map)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Travel.WrongMap"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Travel.WrongMap"]);
 			}
 
 			m_CurrentLocation.X = (short)x;

@@ -389,7 +389,7 @@ namespace TheBox.Forms
 
 			if (SelectedHue == 0)
 			{
-				labName.Text = Pandora.Localization.TextProvider["Common.None"];
+				labName.Text = Pandora.Localization.GetTextProvider()["Common.None"];
 			}
 		}
 
@@ -443,7 +443,7 @@ namespace TheBox.Forms
 			if (SelectedHue == 0)
 			{
 				imgSpectrum.Image = null;
-				labName.Text = Pandora.Localization.TextProvider["Common.None"];
+				labName.Text = Pandora.Localization.GetTextProvider()["Common.None"];
 			}
 		}
 

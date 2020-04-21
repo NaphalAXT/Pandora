@@ -145,7 +145,7 @@ namespace TheBox.Buttons
 		{
 			if (txCommand.Text.Length == 0)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Buttons.ErrCommand"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Buttons.ErrCommand"]);
 				return;
 			}
 

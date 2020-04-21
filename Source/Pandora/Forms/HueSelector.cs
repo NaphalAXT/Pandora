@@ -747,7 +747,7 @@ namespace TheBox.Forms
 
 		private void bDelete_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show(this, "", Pandora.Localization.TextProvider["HuePicker.DeleteGroup"], MessageBoxButtons.YesNo) ==
+			if (MessageBox.Show(this, "", Pandora.Localization.GetTextProvider()["HuePicker.DeleteGroup"], MessageBoxButtons.YesNo) ==
 				DialogResult.Yes)
 			{
 				m_Groups.Groups.Remove(m_SelectedGroup);

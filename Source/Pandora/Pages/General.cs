@@ -539,7 +539,7 @@ namespace TheBox.Pages
 				if (Pandora.Profile.General.AllSkills)
 				{
 					// Display all skills text
-					lnkSkill.Text = Pandora.Localization.TextProvider["Misc.AllSkills"];
+					lnkSkill.Text = Pandora.Localization.GetTextProvider()["Misc.AllSkills"];
 				}
 				else
 				{
@@ -596,7 +596,7 @@ namespace TheBox.Pages
 			}
 			else
 			{
-				lnkSound.Text = Pandora.Localization.TextProvider["General.ChooseSnd"];
+				lnkSound.Text = Pandora.Localization.GetTextProvider()["General.ChooseSnd"];
 			}
 		}
 
@@ -657,7 +657,7 @@ namespace TheBox.Pages
 		private void Skills_AllSkillsSelected(object sender, EventArgs e)
 		{
 			Pandora.Profile.General.AllSkills = true;
-			lnkSkill.Text = Pandora.Localization.TextProvider["Misc.AllSkills"];
+			lnkSkill.Text = Pandora.Localization.GetTextProvider()["Misc.AllSkills"];
 		}
 
 		/// <summary>
@@ -916,11 +916,11 @@ namespace TheBox.Pages
 
 			m_WebMenu = new ContextMenu();
 
-			var add = new MenuItem(Pandora.Localization.TextProvider["General.AddCurrPreset"]);
+			var add = new MenuItem(Pandora.Localization.GetTextProvider()["General.AddCurrPreset"]);
 			add.Click += add_Click;
 			m_WebMenu.MenuItems.Add(add);
 
-			var edit = new MenuItem(Pandora.Localization.TextProvider["General.EditPresets"]);
+			var edit = new MenuItem(Pandora.Localization.GetTextProvider()["General.EditPresets"]);
 			edit.Click += EditWebPresets;
 			m_WebMenu.MenuItems.Add(edit);
 
@@ -952,11 +952,11 @@ namespace TheBox.Pages
 
 			m_SpeechMenu = new ContextMenu();
 
-			var add = new MenuItem(Pandora.Localization.TextProvider["General.AddCurrPreset"]);
+			var add = new MenuItem(Pandora.Localization.GetTextProvider()["General.AddCurrPreset"]);
 			add.Click += add_Click2;
 			m_SpeechMenu.MenuItems.Add(add);
 
-			var edit = new MenuItem(Pandora.Localization.TextProvider["General.EditPresets"]);
+			var edit = new MenuItem(Pandora.Localization.GetTextProvider()["General.EditPresets"]);
 			edit.Click += EditSpeechPresets;
 			m_SpeechMenu.MenuItems.Add(edit);
 

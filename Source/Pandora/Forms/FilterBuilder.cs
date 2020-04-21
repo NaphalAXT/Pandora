@@ -65,7 +65,7 @@ namespace TheBox.Forms
 			// Issue 10 - End
 
 			Pandora.Localization.LocalizeControl(this);
-			Pandora.ToolTip.SetToolTip(cmbOp, Pandora.Localization.TextProvider["Tips.Operators"]);
+			Pandora.ToolTip.SetToolTip(cmbOp, Pandora.Localization.GetTextProvider()["Tips.Operators"]);
 		}
 
 		/// <summary>
@@ -408,7 +408,7 @@ namespace TheBox.Forms
 
 			if (cmbType.Text.Length == 0)
 			{
-				labOutput.Text = Pandora.Localization.TextProvider["Props.NoType"];
+				labOutput.Text = Pandora.Localization.GetTextProvider()["Props.NoType"];
 				return;
 			}
 

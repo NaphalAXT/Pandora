@@ -32,7 +32,7 @@ namespace TheBox.Data
 		public SkillsData()
 		{
 			m_Menu = new ContextMenu();
-			var allskills = new MenuItem(Pandora.Localization.TextProvider["Misc.AllSkills"]);
+			var allskills = new MenuItem(Pandora.Localization.GetTextProvider()["Misc.AllSkills"]);
 			allskills.Click += allskills_Click;
 			m_Menu.MenuItems.Add(allskills);
 			m_Menu.MenuItems.Add(new MenuItem("-"));

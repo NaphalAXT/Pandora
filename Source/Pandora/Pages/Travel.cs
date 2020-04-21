@@ -659,7 +659,7 @@ namespace TheBox.Pages
 			}
 			else
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Travel.NoMaps"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Travel.NoMaps"]);
 			}
 		}
 
@@ -823,7 +823,7 @@ namespace TheBox.Pages
 
 			if (m_Results.Count == 0)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Misc.NoResults"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Misc.NoResults"]);
 				m_Results = null;
 			}
 			else
@@ -877,7 +877,7 @@ namespace TheBox.Pages
 			}
 			catch
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Misc.SearchError"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Misc.SearchError"]);
 				m_Results = null;
 			}
 		}
@@ -1028,7 +1028,7 @@ namespace TheBox.Pages
 			// A location and category is selected
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Travel.ConfirmDelLoc"],
+					Pandora.Localization.GetTextProvider()["Travel.ConfirmDelLoc"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)
@@ -1066,7 +1066,7 @@ namespace TheBox.Pages
 				catch (Exception err)
 				{
 					Pandora.Log.WriteError(err, "Deleting location");
-					MessageBox.Show(Pandora.Localization.TextProvider["Messages.GenericError"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Messages.GenericError"]);
 				}
 			}
 		}
@@ -1112,7 +1112,7 @@ namespace TheBox.Pages
 				else
 				{
 					Pandora.Log.WriteError(null, "Couldn\'t add location because the tCat node wasn\'t a subsection node");
-					MessageBox.Show(Pandora.Localization.TextProvider["Messages.NewLocErr"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Messages.NewLocErr"]);
 				}
 			}
 		}
@@ -1286,7 +1286,7 @@ namespace TheBox.Pages
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Travel.ConfirmDelCat"],
+					Pandora.Localization.GetTextProvider()["Travel.ConfirmDelCat"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Warning) == DialogResult.Yes)

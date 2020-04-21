@@ -81,12 +81,12 @@ namespace TheBox.Forms
 
 				case SearchType.Location:
 
-					Text = Pandora.Localization.TextProvider["Misc.FindLoc"];
+					Text = Pandora.Localization.GetTextProvider()["Misc.FindLoc"];
 					break;
 
 				case SearchType.Mobile:
 
-					Text = Pandora.Localization.TextProvider["Misc.FindMob"];
+					Text = Pandora.Localization.GetTextProvider()["Misc.FindMob"];
 					break;
 			}
 		}

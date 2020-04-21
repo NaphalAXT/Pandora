@@ -369,7 +369,7 @@ namespace TheBox.Buttons
 		{
 			if (txCaption.Text.Length == 0 || txCommand.Text.Length == 0)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["ButtonMenuEditor.ErrCommand"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["ButtonMenuEditor.ErrCommand"]);
 				return;
 			}
 
@@ -431,7 +431,7 @@ namespace TheBox.Buttons
 					cmd += Pandora.Profile.General.CommandPrefix;
 				cmd += m_Def.DefaultCommand.Command;
 
-				MessageBox.Show(string.Format(Pandora.Localization.TextProvider["ButtonMenuEditor.PreviewMsg"], cmd));
+				MessageBox.Show(string.Format(Pandora.Localization.GetTextProvider()["ButtonMenuEditor.PreviewMsg"], cmd));
 			}
 			else
 			{

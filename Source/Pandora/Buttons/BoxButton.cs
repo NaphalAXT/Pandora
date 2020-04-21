@@ -30,14 +30,14 @@ namespace TheBox.Buttons
 
 		private void BuildMenu()
 		{
-			if (Pandora.Localization.TextProvider != null)
+			if (Pandora.Localization.GetTextProvider() != null)
 			{
-				mEdit = new MenuItem(Pandora.Localization.TextProvider["Common.Edit"], EditButton);
-				mEdit = new MenuItem(Pandora.Localization.TextProvider["Common.Edit"], EditButton);
-				mClear = new MenuItem(Pandora.Localization.TextProvider["Common.Clear"], ClearButton);
-				mImport = new MenuItem(Pandora.Localization.TextProvider["Common.Import"], ImportButton);
-				mExport = new MenuItem(Pandora.Localization.TextProvider["Common.Export"], ExportButton);
-				mRestore = new MenuItem(Pandora.Localization.TextProvider["Common.RestoreDefault"], RestoreDefault);
+				mEdit = new MenuItem(Pandora.Localization.GetTextProvider()["Common.Edit"], EditButton);
+				mEdit = new MenuItem(Pandora.Localization.GetTextProvider()["Common.Edit"], EditButton);
+				mClear = new MenuItem(Pandora.Localization.GetTextProvider()["Common.Clear"], ClearButton);
+				mImport = new MenuItem(Pandora.Localization.GetTextProvider()["Common.Import"], ImportButton);
+				mExport = new MenuItem(Pandora.Localization.GetTextProvider()["Common.Export"], ExportButton);
+				mRestore = new MenuItem(Pandora.Localization.GetTextProvider()["Common.RestoreDefault"], RestoreDefault);
 
 				m_Menu = new ContextMenu(new[] {mEdit, mClear, new MenuItem("-"), mImport, mExport, new MenuItem("-"), mRestore});
 
@@ -79,7 +79,7 @@ namespace TheBox.Buttons
 		/// </summary>
 		private void ClearButton(object sender, EventArgs e)
 		{
-			if (MessageBox.Show(this, Pandora.Localization.TextProvider["Buttons.ConfirmClear"], "", MessageBoxButtons.YesNo) ==
+			if (MessageBox.Show(this, Pandora.Localization.GetTextProvider()["Buttons.ConfirmClear"], "", MessageBoxButtons.YesNo) ==
 				DialogResult.Yes)
 			{
 				Pandora.Buttons.ClearButton(this);
@@ -92,7 +92,7 @@ namespace TheBox.Buttons
 		/// </summary>
 		private void ImportButton(object sender, EventArgs e)
 		{
-			if (MessageBox.Show(this, Pandora.Localization.TextProvider["Buttons.ImportConfirm"], "", MessageBoxButtons.YesNo) ==
+			if (MessageBox.Show(this, Pandora.Localization.GetTextProvider()["Buttons.ImportConfirm"], "", MessageBoxButtons.YesNo) ==
 				DialogResult.Yes)
 			{
 				if (OpenFile.ShowDialog() == DialogResult.OK)
@@ -105,7 +105,7 @@ namespace TheBox.Buttons
 					}
 					else
 					{
-						MessageBox.Show(Pandora.Localization.TextProvider["Buttons.LoadFail"]);
+						MessageBox.Show(Pandora.Localization.GetTextProvider()["Buttons.LoadFail"]);
 					}
 				}
 			}
@@ -120,7 +120,7 @@ namespace TheBox.Buttons
 			{
 				if (!m_Def.Save(SaveFile.FileName))
 				{
-					MessageBox.Show(Pandora.Localization.TextProvider["Buttons.SaveFail"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Buttons.SaveFail"]);
 				}
 			}
 		}

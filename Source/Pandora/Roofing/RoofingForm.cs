@@ -534,14 +534,14 @@ namespace TheBox.Roofing
 				if (chkUp.Checked)
 				{
 					// Goes up: Left/Right
-					cmbSlope.Items.Add(Pandora.Localization.TextProvider["Roofing.Left"]);
-					cmbSlope.Items.Add(Pandora.Localization.TextProvider["Roofing.Right"]);
+					cmbSlope.Items.Add(Pandora.Localization.GetTextProvider()["Roofing.Left"]);
+					cmbSlope.Items.Add(Pandora.Localization.GetTextProvider()["Roofing.Right"]);
 				}
 				else
 				{
 					// NO Goes up: // Top Bottom
-					cmbSlope.Items.Add(Pandora.Localization.TextProvider["Roofing.Top"]);
-					cmbSlope.Items.Add(Pandora.Localization.TextProvider["Roofing.Bottom"]);
+					cmbSlope.Items.Add(Pandora.Localization.GetTextProvider()["Roofing.Top"]);
+					cmbSlope.Items.Add(Pandora.Localization.GetTextProvider()["Roofing.Bottom"]);
 				}
 
 				cmbSlope.SelectedIndex = 0;
@@ -755,7 +755,7 @@ namespace TheBox.Roofing
 			{
 				if (MessageBox.Show(
 						this,
-						Pandora.Localization.TextProvider["Roofing.TestRest"],
+						Pandora.Localization.GetTextProvider()["Roofing.TestRest"],
 						"",
 						MessageBoxButtons.YesNo,
 						MessageBoxIcon.Question) == DialogResult.Yes)
@@ -785,7 +785,7 @@ namespace TheBox.Roofing
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Roofing.ClearAll"],
+					Pandora.Localization.GetTextProvider()["Roofing.ClearAll"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)

@@ -111,8 +111,8 @@ namespace TheBox.Options
 
 			if (prof.ProfileVersion > m_CurrentVersion)
 			{
-				if (Pandora.Localization.TextProvider != null)
-					MessageBox.Show(Pandora.Localization.TextProvider["Misc.ProfileIOErr"]);
+				if (Pandora.Localization.GetTextProvider() != null)
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Misc.ProfileIOErr"]);
 				else
 					MessageBox.Show(
 						"Please upgrade your version of Pandora's Box.\n\nThe profile you are importing has been created with a more recent version of this software.");

@@ -35,7 +35,7 @@ namespace TheBox.Buttons
 
 			Pandora.Localization.LocalizeControl(this);
 
-			m_MenuNode = new TreeNode(Pandora.Localization.TextProvider["ButtonMenuEditor.Menu"]);
+			m_MenuNode = new TreeNode(Pandora.Localization.GetTextProvider()["ButtonMenuEditor.Menu"]);
 			Tree.Nodes.Add(m_MenuNode);
 		}
 
@@ -395,7 +395,7 @@ namespace TheBox.Buttons
 			{
 				if (txCaption.Text.Length == 0 || txCommand.Text.Length == 0)
 				{
-					MessageBox.Show(Pandora.Localization.TextProvider["ButtonMenuEditor.ErrCommand"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["ButtonMenuEditor.ErrCommand"]);
 					return;
 				}
 
@@ -425,7 +425,7 @@ namespace TheBox.Buttons
 		{
 			if (txSubmenu.Text.Length == 0)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["ButtonMenuEditor.ErrSub"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["ButtonMenuEditor.ErrSub"]);
 				return;
 			}
 
@@ -530,7 +530,7 @@ namespace TheBox.Buttons
 				cmd += Pandora.Profile.General.CommandPrefix;
 			cmd += e.Command;
 
-			MessageBox.Show(string.Format(Pandora.Localization.TextProvider["ButtonMenuEditor.PreviewMsg"], cmd));
+			MessageBox.Show(string.Format(Pandora.Localization.GetTextProvider()["ButtonMenuEditor.PreviewMsg"], cmd));
 		}
 
 		/// <summary>
@@ -589,7 +589,7 @@ namespace TheBox.Buttons
 					{
 						if (MessageBox.Show(
 								this,
-								Pandora.Localization.TextProvider["Messages.DelConfirm"],
+								Pandora.Localization.GetTextProvider()["Messages.DelConfirm"],
 								"",
 								MessageBoxButtons.YesNo) == DialogResult.Yes)
 						{

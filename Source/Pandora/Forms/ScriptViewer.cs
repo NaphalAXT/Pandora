@@ -52,12 +52,12 @@ namespace TheBox.Forms
 			InitializeComponent();
 
 			// Localized tool tips
-			bRefresh.ToolTipText = Pandora.Localization.TextProvider["Script.Refresh"];
-			bDownload.ToolTipText = Pandora.Localization.TextProvider["Script.Download"];
-			bUpload.ToolTipText = Pandora.Localization.TextProvider["Script.Upload"];
-			bDelete.ToolTipText = Pandora.Localization.TextProvider["Script.Delete"];
-			bExit.ToolTipText = Pandora.Localization.TextProvider["Script.Exit"];
-			bCreateFolder.ToolTipText = Pandora.Localization.TextProvider["Script.CreateFolder"];
+			bRefresh.ToolTipText = Pandora.Localization.GetTextProvider()["Script.Refresh"];
+			bDownload.ToolTipText = Pandora.Localization.GetTextProvider()["Script.Download"];
+			bUpload.ToolTipText = Pandora.Localization.GetTextProvider()["Script.Upload"];
+			bDelete.ToolTipText = Pandora.Localization.GetTextProvider()["Script.Delete"];
+			bExit.ToolTipText = Pandora.Localization.GetTextProvider()["Script.Exit"];
+			bCreateFolder.ToolTipText = Pandora.Localization.GetTextProvider()["Script.CreateFolder"];
 			bEdit.ToolTipText = "Download and edit";
 
 			Pandora.Localization.LocalizeControl(this);
@@ -536,19 +536,19 @@ namespace TheBox.Forms
 								writer.Write(response.Text);
 								writer.Close();
 
-								sBar.Text = string.Format(Pandora.Localization.TextProvider["Script.DownOk"], m_File, SaveFile.FileName);
+								sBar.Text = string.Format(Pandora.Localization.GetTextProvider()["Script.DownOk"], m_File, SaveFile.FileName);
 							}
 							catch (Exception err)
 							{
 								Pandora.Log.WriteError(err, "Can't write file {0} to {1}", filename, SaveFile.FileName);
-								MessageBox.Show(Pandora.Localization.TextProvider["Server.CantWriteFile"]);
+								MessageBox.Show(Pandora.Localization.GetTextProvider()["Server.CantWriteFile"]);
 
-								sBar.Text = string.Format(Pandora.Localization.TextProvider["Script.GenericErr"]);
+								sBar.Text = string.Format(Pandora.Localization.GetTextProvider()["Script.GenericErr"]);
 							}
 						}
 						else
 						{
-							sBar.Text = Pandora.Localization.TextProvider["Script.UnexpectedErr"];
+							sBar.Text = Pandora.Localization.GetTextProvider()["Script.UnexpectedErr"];
 						}
 					}
 				}
@@ -583,7 +583,7 @@ namespace TheBox.Forms
 			catch (Exception err)
 			{
 				Pandora.Log.WriteError(err, "Error when reading text file {0}", OpenFile.FileName);
-				sBar.Text = Pandora.Localization.TextProvider["Script.ReadErr"];
+				sBar.Text = Pandora.Localization.GetTextProvider()["Script.ReadErr"];
 				return;
 			}
 
@@ -592,7 +592,7 @@ namespace TheBox.Forms
 			if (response != null)
 			{
 				// Success
-				sBar.Text = Pandora.Localization.TextProvider["Script.UploadOk"];
+				sBar.Text = Pandora.Localization.GetTextProvider()["Script.UploadOk"];
 
 				// Add item
 				var node = GetTreeNode(Path.GetFileName(OpenFile.FileName));
@@ -622,7 +622,7 @@ namespace TheBox.Forms
 			}
 			else
 			{
-				sBar.Text = Pandora.Localization.TextProvider["Script.UploadFail"];
+				sBar.Text = Pandora.Localization.GetTextProvider()["Script.UploadFail"];
 			}
 		}
 
@@ -636,7 +636,7 @@ namespace TheBox.Forms
 
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Script.ConfirmDel"],
+					Pandora.Localization.GetTextProvider()["Script.ConfirmDel"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.No)
@@ -658,13 +658,13 @@ namespace TheBox.Forms
 
 			if (response != null)
 			{
-				sBar.Text = Pandora.Localization.TextProvider["Script.DelOk"];
+				sBar.Text = Pandora.Localization.GetTextProvider()["Script.DelOk"];
 
 				Tree.Nodes.Remove(Tree.SelectedNode);
 			}
 			else
 			{
-				sBar.Text = Pandora.Localization.TextProvider["Script.DelErr"];
+				sBar.Text = Pandora.Localization.GetTextProvider()["Script.DelErr"];
 			}
 		}
 
@@ -708,14 +708,14 @@ namespace TheBox.Forms
 				if (response != null)
 				{
 					// Success
-					sBar.Text = Pandora.Localization.TextProvider["Script.CrateOk"];
+					sBar.Text = Pandora.Localization.GetTextProvider()["Script.CrateOk"];
 
 					e.Node.Text = e.Label;
 					txFolder.Text = GetFolder(e.Node);
 				}
 				else
 				{
-					sBar.Text = Pandora.Localization.TextProvider["Script.CreateFail"];
+					sBar.Text = Pandora.Localization.GetTextProvider()["Script.CreateFail"];
 
 					e.CancelEdit = true;
 					Tree.Nodes.Remove(e.Node);
@@ -752,13 +752,13 @@ namespace TheBox.Forms
 				if (response != null)
 				{
 					// Success
-					sBar.Text = Pandora.Localization.TextProvider["Script.RenOk"];
+					sBar.Text = Pandora.Localization.GetTextProvider()["Script.RenOk"];
 					e.Node.Text = e.Label;
 					txFolder.Text = GetFolder(e.Node);
 				}
 				else
 				{
-					sBar.Text = Pandora.Localization.TextProvider["Script.RenFail"];
+					sBar.Text = Pandora.Localization.GetTextProvider()["Script.RenFail"];
 					e.CancelEdit = true;
 				}
 			}
@@ -841,7 +841,7 @@ namespace TheBox.Forms
 					}
 					else
 					{
-						sBar.Text = Pandora.Localization.TextProvider["Script.UnexpectedErr"];
+						sBar.Text = Pandora.Localization.GetTextProvider()["Script.UnexpectedErr"];
 					}
 				}
 			}

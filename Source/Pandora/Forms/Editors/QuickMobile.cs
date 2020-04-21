@@ -179,7 +179,7 @@ namespace TheBox.Forms.Editors
 		{
 			if (m_Mobile.Name.Length == 0)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["NPCs.NameError"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["NPCs.NameError"]);
 				return;
 			}
 

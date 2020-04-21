@@ -449,8 +449,8 @@ namespace TheBox.Pages
 				Pandora.Localization.LocalizeMenu(cmItem);
 
 				// Tool tips for nudge button
-				Pandora.ToolTip.SetToolTip(bNudgeUp, Pandora.Localization.TextProvider["Deco.TipNudgeUp"]);
-				Pandora.ToolTip.SetToolTip(bNudgeDown, Pandora.Localization.TextProvider["Deco.TipNudgeDown"]);
+				Pandora.ToolTip.SetToolTip(bNudgeUp, Pandora.Localization.GetTextProvider()["Deco.TipNudgeUp"]);
+				Pandora.ToolTip.SetToolTip(bNudgeDown, Pandora.Localization.GetTextProvider()["Deco.TipNudgeDown"]);
 
 				if (Pandora.Profile.General.DecoSplitter > 0)
 				{
@@ -708,7 +708,7 @@ namespace TheBox.Pages
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["Deco.ConfirmDelCat"],
+					Pandora.Localization.GetTextProvider()["Deco.ConfirmDelCat"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)
@@ -913,7 +913,7 @@ namespace TheBox.Pages
 			}
 			else
 			{
-				MessageBox.Show(string.Format(Pandora.Localization.TextProvider["Deco.NoIDFound"], id));
+				MessageBox.Show(string.Format(Pandora.Localization.GetTextProvider()["Deco.NoIDFound"], id));
 			}
 		}
 
@@ -951,7 +951,7 @@ namespace TheBox.Pages
 			}
 			else
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Deco.NoResults"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Deco.NoResults"]);
 			}
 		}
 

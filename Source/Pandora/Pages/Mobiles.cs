@@ -587,7 +587,7 @@ namespace TheBox.Pages
 
 				foreach (Control c in nRange2.Controls)
 				{
-					Pandora.ToolTip.SetToolTip(c, Pandora.Localization.TextProvider["NPCs.Range2ToolTip"]);
+					Pandora.ToolTip.SetToolTip(c, Pandora.Localization.GetTextProvider()["NPCs.Range2ToolTip"]);
 				}
 
 				RefreshData();
@@ -605,7 +605,7 @@ namespace TheBox.Pages
 				catch (Exception err)
 				{
 					Pandora.Log.WriteError(err, "Couldn't load spawn information properly");
-					MessageBox.Show(Pandora.Localization.TextProvider["Errors.Spawn"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Errors.Spawn"]);
 				}
 
 				// Recent names
@@ -632,7 +632,7 @@ namespace TheBox.Pages
 			tMob.Nodes.Clear();
 
 			// Spawn groups
-			m_GroupNode = new TreeNode(Pandora.Localization.TextProvider["NPCs.SpawnGroups"]);
+			m_GroupNode = new TreeNode(Pandora.Localization.GetTextProvider()["NPCs.SpawnGroups"]);
 			m_GroupNode.Nodes.AddRange(Pandora.SpawnGroups.GetNodes());
 			tCat.Nodes.Add(m_GroupNode);
 
@@ -1039,7 +1039,7 @@ namespace TheBox.Pages
 
 				if (m_Results.Count == 0)
 				{
-					MessageBox.Show(Pandora.Localization.TextProvider["Misc.NoResults"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Misc.NoResults"]);
 					m_Results = null;
 				}
 				else
@@ -1094,7 +1094,7 @@ namespace TheBox.Pages
 			}
 			catch
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Misc.SearchError"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Misc.SearchError"]);
 				m_Results = null;
 			}
 		}
@@ -1297,7 +1297,7 @@ namespace TheBox.Pages
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider[m_SpawnNode ? "NPCs.DeleteSpawns" : "NPCs.DeleteCat"],
+					Pandora.Localization.GetTextProvider()[m_SpawnNode ? "NPCs.DeleteSpawns" : "NPCs.DeleteCat"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -1449,7 +1449,7 @@ namespace TheBox.Pages
 		{
 			if (MessageBox.Show(
 					this,
-					Pandora.Localization.TextProvider["NPCs.ConfirmDel"],
+					Pandora.Localization.GetTextProvider()["NPCs.ConfirmDel"],
 					"",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question) == DialogResult.Yes)

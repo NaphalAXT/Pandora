@@ -41,7 +41,7 @@ namespace TheBox.Forms.Editors
 
 			Pandora.Localization.LocalizeControl(this);
 
-			dGrid.CaptionText = Pandora.Localization.TextProvider["Spawns.List"];
+			dGrid.CaptionText = Pandora.Localization.GetTextProvider()["Spawns.List"];
 		}
 
 		/// <summary>
@@ -266,7 +266,7 @@ namespace TheBox.Forms.Editors
 
 				if (exists)
 				{
-					MessageBox.Show(Pandora.Localization.TextProvider["Spawns.Exists"]);
+					MessageBox.Show(Pandora.Localization.GetTextProvider()["Spawns.Exists"]);
 				}
 				else
 				{
@@ -364,11 +364,11 @@ namespace TheBox.Forms.Editors
 		{
 			if (m_Spawn.Name == null || m_Spawn.Name.Length == 0)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Spawns.NoName"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Spawns.NoName"]);
 			}
 			else if (m_Spawn.Entries.Count == 0)
 			{
-				MessageBox.Show(Pandora.Localization.TextProvider["Spawns.Empty"]);
+				MessageBox.Show(Pandora.Localization.GetTextProvider()["Spawns.Empty"]);
 			}
 			else
 			{

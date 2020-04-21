@@ -384,7 +384,7 @@ namespace TheBox.Buttons
 			}
 			if (function is MenuDef)
 			{
-				return Pandora.Localization.TextProvider["Buttons.MenuDesc"];
+				return Pandora.Localization.GetTextProvider()["Buttons.MenuDesc"];
 			}
 
 			return null;
@@ -399,12 +399,12 @@ namespace TheBox.Buttons
 			{
 				if (ModifierDef != null)
 				{
-					var left = string.Format(Pandora.Localization.TextProvider["Buttons.TipLeft"], ModifierDef.Command);
+					var left = string.Format(Pandora.Localization.GetTextProvider()["Buttons.TipLeft"], ModifierDef.Command);
 					var right = string.Format(
-						Pandora.Localization.TextProvider["Buttons.TipRight"],
-						Pandora.Localization.TextProvider["Buttons.ModRight"]);
+						Pandora.Localization.GetTextProvider()["Buttons.TipRight"],
+						Pandora.Localization.GetTextProvider()["Buttons.ModRight"]);
 
-					return string.Format(Pandora.Localization.TextProvider["Buttons.TipTwoLine"], left, right);
+					return string.Format(Pandora.Localization.GetTextProvider()["Buttons.TipTwoLine"], left, right);
 				}
 				if (MultiDef == null)
 				{
@@ -423,18 +423,18 @@ namespace TheBox.Buttons
 
 					if (left != null && right != null)
 					{
-						var l = string.Format(Pandora.Localization.TextProvider["Buttons.TipLeft"], left);
-						var r = string.Format(Pandora.Localization.TextProvider["Buttons.TipRight"], right);
+						var l = string.Format(Pandora.Localization.GetTextProvider()["Buttons.TipLeft"], left);
+						var r = string.Format(Pandora.Localization.GetTextProvider()["Buttons.TipRight"], right);
 
-						return string.Format(Pandora.Localization.TextProvider["Buttons.TipTwoLine"], l, r);
+						return string.Format(Pandora.Localization.GetTextProvider()["Buttons.TipTwoLine"], l, r);
 					}
 					if (left != null)
 					{
-						return string.Format(Pandora.Localization.TextProvider["Buttons.TipLeft"], left);
+						return string.Format(Pandora.Localization.GetTextProvider()["Buttons.TipLeft"], left);
 					}
 					if (right != null)
 					{
-						return string.Format(Pandora.Localization.TextProvider["Buttons.TipRight"], right);
+						return string.Format(Pandora.Localization.GetTextProvider()["Buttons.TipRight"], right);
 					}
 
 					return null;
@@ -444,13 +444,13 @@ namespace TheBox.Buttons
 					// This is a multi def
 
 					var left = string.Format(
-						Pandora.Localization.TextProvider["Buttons.TipLeft"],
+						Pandora.Localization.GetTextProvider()["Buttons.TipLeft"],
 						MultiDef.DefaultCommand.FullCommand);
 					var right = string.Format(
-						Pandora.Localization.TextProvider["Buttons.TipRight"],
-						Pandora.Localization.TextProvider["Buttons.MultiRightClick"]);
+						Pandora.Localization.GetTextProvider()["Buttons.TipRight"],
+						Pandora.Localization.GetTextProvider()["Buttons.MultiRightClick"]);
 
-					return string.Format(Pandora.Localization.TextProvider["Buttons.TipTwoLine"], left, right);
+					return string.Format(Pandora.Localization.GetTextProvider()["Buttons.TipTwoLine"], left, right);
 				}
 			}
 		}
